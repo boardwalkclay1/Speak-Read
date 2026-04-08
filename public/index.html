@@ -4,15 +4,20 @@
   <meta charset="UTF-8" />
   <title>Speak Read – Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Correct path: manifest is in /public -->
+  <link rel="manifest" href="./manifest.json" />
+
+  <!-- Correct path: styles.css is in /public -->
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body class="sr-body">
   <header class="sr-header">
     <div class="sr-logo">Speak <span>Read</span></div>
     <nav class="sr-nav">
-      <a href="index.html" class="sr-nav-link sr-nav-link-active">Home</a>
-      <a href="results.html" class="sr-nav-link">Results</a>
+      <!-- Correct paths for navigation -->
+      <a href="./index.html" class="sr-nav-link sr-nav-link-active">Home</a>
+      <a href="./results.html" class="sr-nav-link">Results</a>
     </nav>
   </header>
 
@@ -30,6 +35,7 @@
           <li><strong>Session history</strong> with timestamps and levels</li>
         </ul>
       </div>
+
       <div class="sr-hero-card">
         <h2>Start a New Reading Session</h2>
         <form id="sr-level-form" class="sr-form">
@@ -96,6 +102,7 @@
     <p>Speak Read &copy; <span id="sr-year"></span></p>
   </footer>
 
-  <script type="module" src="js/home.js"></script>
+  <!-- Correct path: JS modules live in /public/js -->
+  <script type="module" src="./js/home.js"></script>
 </body>
 </html>
