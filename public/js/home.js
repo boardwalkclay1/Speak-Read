@@ -1,7 +1,4 @@
 // js/home.js
-// SPEAK READ — HOME PAGE CONTROLLER
-// Handles: year footer, form validation, routing to read.html
-
 import { setYearFooter } from "./utils.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -29,8 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Build URL → read.html?level=X&mode=Y
-    const url = new URL(window.location.origin + "/read.html");
+    // RELATIVE PATH — WORKS EVERYWHERE
+    const url = new URL("./read.html", window.location.href);
     url.searchParams.set("level", level);
     url.searchParams.set("mode", mode);
 
